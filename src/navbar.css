@@ -1,0 +1,148 @@
+nav {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: aliceblue;
+  height: 10vh;
+  padding: 0 15px;
+}
+
+nav img {
+  height: 50px;
+}
+
+.nav-categories {
+  width: 50vw;
+  height: 100%;
+}
+
+.nav-categories ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-categories ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-categories ul li:hover {
+  border-bottom: solid 2.5px aqua;
+}
+
+.nav-down {
+  margin-top: 10vh;
+  height: 40vh;
+  background-color: black;
+  padding: 15px 10vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.container-img {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-img > img {
+  width: 100%;
+}
+
+.container-img > img:hover {
+  transform: scale(1.25);
+  transition: transform ease-in-out 1s;
+  cursor: pointer;
+}
+
+.container-img > h3 {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  font-size: 3rem;
+  color: aliceblue;
+}
+
+.container-img:hover > h3 {
+  color: aqua;
+  cursor: pointer;
+}
+
+.nav-down-ul {
+  width: 35vw;
+  color: aliceblue;
+}
+
+.nav-down-ul > ul {
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav-down-ul > ul > li:nth-child(1) {
+  color: aqua;
+}
+
+/*
+.dropdown-menu {
+  position: absolute;
+  bottom: -200px;
+  left: 0;
+  background-color: bisque;
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 10vw;
+  justify-content: space-between;
+}
+
+.dropdown-menu > a {
+  width: 15vw;
+  border: solid black 1px;
+  background-image: url("../public/KC_ESS_1500x1500_94d90382-3441-4923-9ec2-17da3b80e4b8.webp");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.dropdown-menu > a:hover {
+  background-size: 150%;
+  transition: background-size 1s;
+}
+*/
+
+.nav-right {
+  display: flex;
+  justify-content: space-evenly;
+  width: 10vw;
+}
+
+.icon-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  img {
+    width: 75%;
+    height: 80%;
+  }
+  img:hover {
+    cursor: pointer;
+  }
+}
