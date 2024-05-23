@@ -1,0 +1,116 @@
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 25px;
+  border: 3px solid #ffffff;
+}
+
+.container-caroussel {
+  margin-top: 50px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  .container-caroussel-head {
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .container-caroussel-head-buttons {
+      display: flex;
+      gap: 15px;
+      button {
+        border-radius: 50%;
+        border: none;
+        display: flex;
+        align-items: center;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: rgb(195, 195, 195);
+      }
+    }
+  }
+  .container-caroussel-content-smaller {
+    height: 40vh;
+    width: 95vw;
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    .container-caroussel-content-product {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-bottom: 15px;
+      .container-caroussel-content-product-img {
+        width: 450px;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        img:hover {
+          cursor: pointer;
+          transform: scale(1.125);
+          transition: transform 0.5s ease-in-out;
+        }
+      }
+      button {
+        position: absolute;
+        border-radius: 20px;
+        border: none;
+        padding: 10px 15px;
+        bottom: 30px;
+        left: 20px;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: rgb(206, 206, 206);
+      }
+    }
+  }
+  .container-caroussel-content {
+    height: 80vh;
+    width: 95vw;
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    .container-caroussel-content-product {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .container-caroussel-content-product-img {
+        height: 90%;
+        width: 450px;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        img:hover {
+          cursor: pointer;
+          transform: scale(1.125);
+          transition: transform 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+}
