@@ -1,5 +1,9 @@
 import { useState } from "react";
 import "./navbar.css";
+import "./Components/Home/Video.css";
+import { Link } from "react-router-dom";
+import { CiShoppingCart, CiHeart } from "react-icons/ci";
+import { CgProfile } from "react-icons/cg";
 
 function Navbar() {
   const [hidden, setHidden] = useState(true);
@@ -67,68 +71,19 @@ function Navbar() {
               Boutique
             </li>
           </ul>
-
-          {/*<div className="dropdown">
-            <a href="">
-              <h2>Accueil</h2>
-            </a>
-            <div className="dropdown-menu">
-              <a href="#">
-                <h3>exemple</h3>
-              </a>
-              <a href="#">
-                <h3>exemple</h3>
-              </a>
-              <a href="#">
-                <h3>exemple</h3>
-              </a>
-              <a href="#">
-                <h3>exemple</h3>
-              </a>
-            </div>
-          </div>
-          <div className="dropdown">
-            <a href="">
-              <h2>Accueil</h2>
-            </a>
-            <div className="dropdown-menu">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-              <a href="#">Link 4</a>
-            </div>
-          </div>
-          <div className="dropdown">
-            <a href="">
-              <h2>Accueil</h2>
-            </a>
-            <div className="dropdown-menu">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-              <a href="#">Link 4</a>
-            </div>
-          </div>
-          <div className="dropdown">
-            <a href="">
-              <h2>Accueil</h2>
-            </a>
-            <div className="dropdown-menu">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-              <a href="#">Link 4</a>
-            </div>
-          </div>*/}
         </div>
         <div className="nav-right">
           <div className="icon-right">
             {" "}
-            <img src="../public/heart.png" alt="" />
+            <CiHeart style={{ width: "80%", height: "80%" }} />
           </div>
           <div className="icon-right">
             {" "}
-            <img src="../public/shopping-cart.png" alt="" />
+            <CiShoppingCart style={{ width: "80%", height: "80%" }} />
+          </div>
+          <div className="icon-right">
+            {" "}
+            <CgProfile style={{ width: "80%", height: "80%" }} />
           </div>
         </div>
       </nav>
