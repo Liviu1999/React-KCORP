@@ -42,6 +42,8 @@ nav img {
 
 .nav-down {
   margin-top: 10vh;
+  z-index: 4;
+  top: 10vh;
   height: 40vh;
   background-color: black;
   padding: 15px 10vw;
@@ -138,6 +140,7 @@ nav img {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  width: 50px;
   img {
     width: 75%;
     height: 80%;

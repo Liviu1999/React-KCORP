@@ -1,0 +1,16 @@
+.container-bio {
+  height: 65vh;
+  background-color: aqua;
+  .bio-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    background-color: blanchedalmond;
+    height: 45vh;
+    h3 {
+      font-size: var(--font-size-l);
+      font-weight: var(--font-weight-normal);
+    }
+  }
+}

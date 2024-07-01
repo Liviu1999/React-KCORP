@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,4 +15,33 @@
   --font-weight-sm: 100;
   --font-weight-normal: 700;
   --font-weight-l: 900;
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+.newsletter {
+  animation-timeline: view(block);
+  animation-name: shrink;
+  animation-range: entry -10%;
+}
+
+@keyframes shrink {
+  from {
+    scale: 0.5;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
 }
