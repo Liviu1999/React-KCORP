@@ -7,6 +7,8 @@ import Register from "./Components/Auth/Register";
 import Login from "./Components/Auth/Login";
 import Esport from "./Components/Esport/Esport";
 import Ultras from "./Components/Ultras/Ultras";
+import Search from "./Components/Search";
+import ProductKC from "./Components/ProductKC";
 function App() {
   return (
     <>
@@ -19,6 +21,8 @@ function App() {
           <Route path="/esport" element={<Esport />} />
           <Route path="/ultras" element={<Ultras />} />
           <Route path="/product/:id" element={<Product />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/product/kc" element={<ProductKC />} />
           <Route path="/404" />
         </Routes>
       </Router>
