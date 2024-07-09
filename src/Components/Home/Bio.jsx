@@ -1,7 +1,7 @@
 import "./Bio.css";
 function Bio({ title, para, img }) {
   return (
-    <div className="bg-black h-[75vh] my-8 px-64 py-8 grid grid-cols-2 grid-rows-1 text-white">
+    <div className="bg-black h-[75vh]  px-64 py-8 grid grid-cols-2 grid-rows-1 text-white">
       <div className="col-start-1 flex flex-col justify-center gap-6">
         <h3 className="text-4xl font-bold">{title}</h3>
         <p>{para}</p>
