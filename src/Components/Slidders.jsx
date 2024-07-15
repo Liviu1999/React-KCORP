@@ -7,7 +7,7 @@ function Slidders({ items, title, description }) {
   const numberOfPlayers = items.length;
   const halfNumberOfPlayers = numberOfPlayers / 2;
 
-  console.log(halfNumberOfPlayers); // Outputs: 3
+  // console.log(halfNumberOfPlayers); // Outputs: 3
   const handleNext = () => {
     if (currentIndex < halfNumberOfPlayers) {
       setCurrentIndex(currentIndex + 1);

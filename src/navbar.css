@@ -28,7 +28,7 @@ nav img {
   justify-content: space-evenly;
 }
 
-.nav-categories ul li {
+.nav-categories ul .li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +36,7 @@ nav img {
   height: 100%;
 }
 
-.nav-categories ul li:hover {
+.nav-categories ul .li:hover {
   border-bottom: solid 2.5px aqua;
 }
 
@@ -94,7 +94,7 @@ nav img {
   list-style: none;
 }
 
-.nav-down-ul > ul > li:nth-child(1) {
+.nav-down-ul > ul > .li:nth-child(1) {
   color: aqua;
 }
 

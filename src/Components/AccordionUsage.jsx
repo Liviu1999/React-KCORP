@@ -36,7 +36,7 @@ export default function AccordionUsage() {
           COMPOSITION
         </StyledAccordion>
         <StyledAccordionBis>
-          <ul>
+          <ul className="flex flex-col gap-2">
             <li>Notre T-shirt Classique Beige est fabriqué au Portugal</li>
             <li>100% Coton - 180 GSM</li>
           </ul>
@@ -51,7 +51,7 @@ export default function AccordionUsage() {
           ENTRETIEN
         </StyledAccordion>
         <StyledAccordionBis>
-          <ul>
+          <ul className="flex flex-col gap-2">
             <li>
               Veuillez patienter 24 heures après avoir reçu l'article avant de
               le laver.

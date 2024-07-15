@@ -4,11 +4,13 @@ import "./Components/Home/Video.css";
 import { Link } from "react-router-dom";
 import { CiShoppingCart, CiHeart } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
+import ReviewBag from "./Components/ReviewBag";
 
 function Navbar() {
   const [hidden, setHidden] = useState(true);
   const [hiddenSec, setHiddenSec] = useState(true);
   const [hiddenThird, setHiddenThird] = useState(true);
+  const [isHidden, setIsHidden] = useState(true);
 
   return (
     <>
@@ -16,7 +18,9 @@ function Navbar() {
         <img src="/Kcorp-Logo.svg" alt="Kcorp Logo" />
         <div className="nav-categories">
           <ul>
-            <li
+            <Link
+              className="li"
+              to="/"
               onMouseEnter={() => [
                 setHidden(true),
                 setHiddenSec(true),
@@ -24,8 +28,10 @@ function Navbar() {
               ]}
             >
               Accueil
-            </li>
-            <li
+            </Link>
+            <Link
+              className="li"
+              to="/"
               onMouseEnter={() => [
                 setHidden(false),
                 setHiddenSec(true),
@@ -33,8 +39,10 @@ function Navbar() {
               ]}
             >
               Kcorp
-            </li>
-            <li
+            </Link>
+            <Link
+              className="li"
+              to="/esport"
               onMouseEnter={() => [
                 setHiddenSec(false),
                 setHidden(true),
@@ -42,8 +50,10 @@ function Navbar() {
               ]}
             >
               Esports
-            </li>
-            <li
+            </Link>
+            <Link
+              className="li"
+              to="/ultras"
               onMouseEnter={() => [
                 setHidden(true),
                 setHiddenSec(true),
@@ -51,8 +61,10 @@ function Navbar() {
               ]}
             >
               Ultras
-            </li>
-            <li
+            </Link>
+            <Link
+              className="li"
+              to="/partenaires"
               onMouseEnter={() => [
                 setHidden(true),
                 setHiddenSec(true),
@@ -60,8 +72,10 @@ function Navbar() {
               ]}
             >
               Partenaires
-            </li>
-            <li
+            </Link>
+            <Link
+              className="li"
+              to="/product/kc"
               onMouseEnter={() => [
                 setHiddenThird(false),
                 setHidden(true),
@@ -69,7 +83,7 @@ function Navbar() {
               ]}
             >
               Boutique
-            </li>
+            </Link>
           </ul>
         </div>
         <div className="nav-right">
@@ -79,7 +93,11 @@ function Navbar() {
           </div>
           <div className="icon-right">
             {" "}
-            <CiShoppingCart style={{ width: "80%", height: "80%" }} />
+            <CiShoppingCart
+              className="hover:cursor-pointer"
+              onClick={() => setIsHidden(!isHidden)}
+              style={{ width: "80%", height: "80%" }}
+            />
           </div>
           <div className="icon-right">
             {" "}
@@ -153,7 +171,7 @@ function Navbar() {
           </div>
         )}
       </div>
-
+      <ReviewBag isHidden={isHidden} setIsHidden={setIsHidden} />
       <div>
         {hiddenThird ? null : (
           <div className="nav-down" onMouseLeave={() => setHiddenThird(true)}>

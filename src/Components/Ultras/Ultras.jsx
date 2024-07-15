@@ -16,9 +16,9 @@ function Ultras() {
   return (
     <>
       <Header
-        title="DEVENEZ PARTENAIRE KARMINE CORP"
-        para="FAITES UN PAS DANS L'ESPORT AUX COTES DES MEILLEURS"
-        img="../../../public/ultras-ban.webp"
+        title="LA ZONE DES ULTRAS"
+        para="ULTRAS"
+        img="../../../public/BANNIERE_ULTRA_DESKTOP.webp"
       />
       <Slidders
         items={players}
