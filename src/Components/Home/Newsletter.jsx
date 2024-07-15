@@ -16,16 +16,24 @@ function Newsletter() {
         <p>Restez informé(e) de nos nouveautés & offres</p>
       </div>
       <form action="" className="w-2/3 flex justify-center gap-1">
-        <input
-          className="w-2/3 py-2 px-4 text-black"
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Votre addresse email"
-          value={email}
-          onChange={handleChangeEmail}
-        />
-        <button className="bg-white text-black h-full w-16" type="submit">
+        <div className="">
+          <input
+            className="w-full h-2/3 py-2 px-4 text-black peer invalid:border-pink-500 invalid:text-pink-600
+      focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Votre addresse email"
+            value={email}
+            onChange={handleChangeEmail}
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          />
+          <p className="mt-2 invisible  peer-invalid:peer-placeholder-shown:invisible peer-invalid:visible  text-red-500 text-sm">
+            Please provide a valid email address.
+          </p>
+        </div>
+        <button className="bg-white text-black w-16 h-2/3" type="submit">
           OK
         </button>
       </form>

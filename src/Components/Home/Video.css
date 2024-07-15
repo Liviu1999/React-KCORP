@@ -1,11 +1,12 @@
 .container-video {
-  margin-top: 10vh;
+  padding-top: 10vh;
   height: 65vh;
   position: relative;
   color: white;
+  background-color: black;
   .container-video-bloc {
     position: absolute;
-    bottom: 30px;
+    bottom: -30px;
     left: 30px;
     display: flex;
     flex-direction: column;

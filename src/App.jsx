@@ -9,6 +9,7 @@ import Esport from "./Components/Esport/Esport";
 import Ultras from "./Components/Ultras/Ultras";
 import Search from "./Components/Search";
 import ProductKC from "./Components/ProductKC";
+import Partenaires from "./Components/Partenaires";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Route path="/auth/register" element={<Register />} />
           <Route path="/auth/login" element={<Login />} />
           <Route path="/esport" element={<Esport />} />
+          <Route path="/partenaires" element={<Partenaires />} />
           <Route path="/ultras" element={<Ultras />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/search" element={<Search />} />

@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { CiShoppingCart, CiHeart } from "react-icons/ci";
 import Newsletter from "./Home/Newsletter";
 import Footer from "./Home/Footer";
 import AccordionUsage from "./AccordionUsage";
+import ReviewBag from "./ReviewBag";
 
 function ProductKC() {
   const [focusedRadio, setFocusedRadio] = useState(null);
   const [focusColors, setFocusedColors] = useState(null);
   const [itemsNumber, setItemsNumber] = useState(1);
   const [isLiked, setIsLiked] = useState(false);
+  const [price, setPrice] = useState(35);
+  const basePrice = 35;
 
   const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
   const colors = ["blue", "red", "green", "black", "white"];
@@ -120,11 +123,12 @@ function ProductKC() {
               </form>
             </div>
             <div className="flex justify-between items-center">
-              <h2 className="text-xl">$30,00</h2>
+              <h2 className="text-xl">${price}</h2>
               <div className="flex">
                 <button
                   onClick={() => {
                     setItemsNumber((prev) => Math.max(prev - 1, 1));
+                    setPrice((prev) => Math.max(prev - basePrice, basePrice));
                   }}
                   className="w-10 h-10 flex justify-center items-center border-gray-200 border-2 text-lg"
                 >
@@ -136,6 +140,7 @@ function ProductKC() {
                 <button
                   onClick={() => {
                     setItemsNumber((prev) => prev + 1);
+                    setPrice((prev) => prev + basePrice);
                   }}
                   className="w-10 h-10 flex justify-center items-center border-gray-200 border-2 text-lg"
                 >
